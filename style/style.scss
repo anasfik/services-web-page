@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;400;500&family=Poppins:wght@400;600&display=swap");
+@import "variables";
+@import "mixins";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $ourfont;
+  color: $clrFont;
+}
+
+body {
+  background-color: $clrGrey2;
+  background: {
+    image: url("/assets/bg.svg");
+    repeat: repeat;
+    size: cover;
+    attachment: fixed;
+  }
+}
+.container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 0 20px;
+  p:not(.cardP) {
+    margin: 20px auto 0;
+    font-size: 16px;
+    max-width: 600px;
+    text-align: center;
+    color: lighten($clrFont, 15%);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    height: 450px;
+    margin: 20px 0;
+    div:nth-child(1) {
+      border-top: 4px solid $clrGreen;
+    }
+    div:nth-child(3) {
+      border-top: 4px solid $clrBlue;
+    }
+    .column div:nth-child(1) {
+      border-top: 4px solid $clrRed;
+    }
+    .column div:nth-child(2) {
+      border-top: 4px solid $clrYellow;
+    }
+    .column {
+      display: grid;
+      place-items: center;
+    }
+    .column div {
+      margin: 10px 0;
+    }
+    div:not(.column) {
+      transition: 0.4s;
+      background-color: lighten($clrGrey, 100%);
+      padding: 27px;
+      font-weight: 400;
+      width: 93%;
+      @include regularFont;
+      box-shadow: -1px 10px 20px -4px #00000036;
+
+      h3 {
+        color: darken($clrFont, 10%);
+        margin-bottom: 10px;
+        font-size: larger;
+      }
+      p {
+        color: lighten($clrFont, 20%);
+      }
+      img {
+        margin: 30px 12px 0;
+        float: right;
+        width: 58px;
+        height: 58px;
+      }
+      &:hover {
+        transform: translate(0, -5px);
+      }
+    }
+  }
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  &.firstTitle {
+    @include lightFont;
+    -webkit-text-stroke: 0.5px;
+  }
+  &.secondTitle {
+    @include semiBoldFont;
+  }
+}
+
+@import "mediaQueries";

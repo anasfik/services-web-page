@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;400;500&family=Poppins:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Anek Latin, sans-serif;
+  color: #464554;
+}
+
+body {
+  background-color: #fafafa;
+  background-image: url("/assets/bg.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 0 20px;
+}
+.container p:not(.cardP) {
+  margin: 20px auto 0;
+  font-size: 16px;
+  max-width: 600px;
+  text-align: center;
+  color: #69687e;
+}
+.container .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  height: 450px;
+  margin: 20px 0;
+}
+.container .grid div:nth-child(1) {
+  border-top: 4px solid #4ebdad;
+}
+.container .grid div:nth-child(3) {
+  border-top: 4px solid #4788c2;
+}
+.container .grid .column div:nth-child(1) {
+  border-top: 4px solid #e67e22;
+}
+.container .grid .column div:nth-child(2) {
+  border-top: 4px solid #8e44ad;
+}
+.container .grid .column {
+  display: grid;
+  place-items: center;
+}
+.container .grid .column div {
+  margin: 10px 0;
+}
+.container .grid div:not(.column) {
+  transition: 0.4s;
+  background-color: white;
+  padding: 27px;
+  font-weight: 400;
+  width: 93%;
+  font-weight: 400;
+  box-shadow: -1px 10px 20px -4px rgba(0, 0, 0, 0.2117647059);
+}
+.container .grid div:not(.column) h3 {
+  color: #2f2e38;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+.container .grid div:not(.column) p {
+  color: #75738c;
+}
+.container .grid div:not(.column) img {
+  margin: 30px 12px 0;
+  float: right;
+  width: 58px;
+  height: 58px;
+}
+.container .grid div:not(.column):hover {
+  transform: translate(0, -5px);
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+h1.firstTitle {
+  font-weight: 100;
+  -webkit-text-stroke: 0.5px;
+}
+h1.secondTitle {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 700px) {
+  .container .grid {
+    display: -ms-grid;
+    justify-content: center;
+    display: flex;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    height: unset;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .container .grid .column div {
+    margin: unset;
+  }
+  .container .grid .column div {
+    margin: 10px 0 !important;
+  }
+}/*# sourceMappingURL=style.css.map */

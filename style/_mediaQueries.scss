@@ -1,0 +1,19 @@
+@media screen and (max-width: 700px) {
+  .container .grid {
+    display: -ms-grid;
+    justify-content: center;
+    display: flex;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    height: unset;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .container .grid .column div {
+    margin: unset;
+  }
+  .container .grid .column div {
+    margin: 10px 0 !important;
+  }
+}

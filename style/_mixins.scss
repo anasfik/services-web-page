@@ -1,0 +1,9 @@
+@mixin lightFont {
+    font-weight: 100;
+}
+@mixin regularFont {
+    font-weight: 400;
+}
+@mixin semiBoldFont {
+    font-weight: 500;
+}
